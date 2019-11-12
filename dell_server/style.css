@@ -1,0 +1,19 @@
+
+.co
+{
+    background-color:#007db8;
+}
+button{
+    background-color: #007db8;
+    color:white;
+    
+}
+.wh{
+    color: white;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }

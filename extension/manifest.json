@@ -1,0 +1,39 @@
+{
+    "manifest_version":2,
+    "name":"Dell Extension",
+    "description":"Sending the data to the backend",
+    "content_scripts":[
+        {
+            "matches":[
+                "<all_urls>"
+            ],
+            "js":["content.js"],
+            // 2 lines added here
+            "run_at": "document_idle",
+            "all_frames": false
+        }
+    ],
+    "browser_action":{
+        "default_popup":"index.html",
+        "default_icon": {
+            "256":"dell.png"}
+    },
+    "version":"1.0.0",
+    "permissions":[
+        "http://localhost:*/*","storage","background","tabs","notifications"
+    ],
+    "commands": {
+        "_execute_browser_action": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+F",
+            "mac": "MacCtrl+Shift+F"
+          },
+          "description": "Opens index.html"
+        }
+      },
+    "background":{
+        // 1 line added here
+        "persistent":false,
+        "scripts":["background.js"]
+    }
+}
